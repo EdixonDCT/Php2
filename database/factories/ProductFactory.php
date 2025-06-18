@@ -13,7 +13,7 @@ class ProductFactory extends Factory
         return [
             'name' => fake()->word(),
             'category_id' => Category::all()->random()->id,
-            'image_id' => Image::factory()->create()->id,
+            // 'image_id' => Image::factory()->create()->id,
         ];
     }
 }

@@ -8,8 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Image extends Model
 {
     use HasFactory;
-    public function products()
+    // public function products()
+    // {
+    //     return $this->hasOne(Product::class);
+    // }
+    public function imageable()
     {
-        return $this->hasOne(Product::class);
+        return $this->morphTo();
     }
 }
